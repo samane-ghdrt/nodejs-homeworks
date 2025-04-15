@@ -11,3 +11,5 @@ Write a Node.js script that utilizes the fs module to perform the following task
 
 */
 // answer
+fs=require('fs');
+fs.writeFile('example.txt','This is the data to write to the file.',)
