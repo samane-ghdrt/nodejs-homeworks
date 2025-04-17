@@ -10,3 +10,11 @@ hint: process.argv
 
 5- Use the command-line arguments as inputs to the login function and log the result to the console.
 */
+fs=require('fs')
+function login(username,password) {
+    
+}
+const user=process.argv[2]
+const pass=process.argv[3]
+login(user,pass)
+

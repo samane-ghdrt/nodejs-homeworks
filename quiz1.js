@@ -12,4 +12,10 @@ Write a Node.js script that utilizes the fs module to perform the following task
 */
 // answer
 fs=require('fs');
-fs.writeFile('example.txt','This is the data to write to the file.',)
+fs.writeFile('example.txt','This is the data to write to the file.', (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+     console.log('file written successfully');
+     
+    }})

@@ -6,5 +6,12 @@ Create a Node.js script that reads the content of a file named 'example.txt' usi
 - If the file is successfully read, display its content to the console along with the message "File content:".
 - Your solution should include the usage of the fs.readFile() function
 */
-
+fs=require('fs')
+fs.readFile('example.txt','utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+})
 // answer
