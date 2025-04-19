@@ -11,3 +11,9 @@
 
 guide: https://momentjs.com/docs/#/displaying/fromnow/
 */
+import moment from 'moment';
+const date=moment().format();
+const Date = moment("2024-01-14").format("YYYY-MM-DD");
+moment("2024-01-14").fromNow();
+console.log(moment("2024-01-14").fromNow());
+console.log(date);

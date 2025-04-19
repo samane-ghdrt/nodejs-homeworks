@@ -10,3 +10,12 @@ guide: https://www.npmjs.com/package/random-words
 4- Convert Words to Uppercase: Iterate over the array of words and convert each word to uppercase and log it to the console.
 
 */
+import { generate } from "random-words";
+console.log(generate(5));
+const random=generate(5);
+console.log(random);
+
+random.forEach(word => {
+   console.log( word.toUpperCase());
+   
+});
