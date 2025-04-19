@@ -11,6 +11,7 @@ hint: process.argv
 5- Use the command-line arguments as inputs to the login function and log the result to the console.
 */
 fs=require('fs')
+fs.file
 function login(username,password) {
     
 }
