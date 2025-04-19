@@ -18,22 +18,25 @@ fs.readFile('data.json', 'utf8', (err, data) => {
       return;
     }
     console.log(data);
+    datas=JSON.parse(data);
     const user=process.argv[2]
     const pass=process.argv[3]
     function login(username,password) {
-    data.forEach(element => {
+        let matchedUser = null;
+    datas.forEach(element => {
        if (element.username===username&&element.password===password) {
-        
+        matchedUser=element;
        } 
-       else{
-        console.log("email or password incorrect.");
-        
-       }
-    });
     
+    });
+    if (matchedUser) {
+        return matchedUser; 
+      } else {
+        return "email or password incorrect.";
+      }
     }
-    login(user,pass)
+    console.log(login(user,pass));
+    
   });
-log(datas)
 
 
