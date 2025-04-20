@@ -10,12 +10,30 @@ hint: process.argv
 
 5- Use the command-line arguments as inputs to the login function and log the result to the console.
 */
+let datas=[];
 fs=require('fs')
-fs.file
-function login(username,password) {
+fs.readFile('data.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(data);
+    const user=process.argv[2]
+    const pass=process.argv[3]
+    function login(username,password) {
+    data.forEach(element => {
+       if (element.username===username&&element.password===password) {
+        
+       } 
+       else{
+        console.log("email or password incorrect.");
+        
+       }
+    });
     
-}
-const user=process.argv[2]
-const pass=process.argv[3]
-login(user,pass)
+    }
+    login(user,pass)
+  });
+log(datas)
+
 
